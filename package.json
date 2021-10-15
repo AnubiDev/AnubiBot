@@ -1,0 +1,37 @@
+{
+  "name": "anubi-bot",
+  "version": "0.0.1",
+  "author": {
+    "name": "Anubi1000",
+    "url": "https://anubi1000.github.io/"
+  },
+  "private": true,
+  "engines": {
+    "node": "16.11.0"
+  },
+  "scripts": {
+    "compile": "npx tsc --project ./tsconfig.json",
+    "start": "node Main.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bufferutil": "4.0.4",
+    "chalk": "4.1.2",
+    "dayjs": "1.10.7",
+    "discord.js": "13.2.0",
+    "typescript": "4.4.3",
+    "utf-8-validate": "5.0.6",
+    "winston": "3.3.3",
+    "winston-daily-rotate-file": "4.5.5",
+    "zlib-sync": "0.1.7"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-typescript": "7.15.0",
+    "@types/jest": "27.0.2",
+    "babel-jest": "27.2.5",
+    "ts-node": "10.3.0",
+    "jest": "27.2.5"
+  }
+}

@@ -1,0 +1,7 @@
+/.idea/
+/node_modules/
+/data/
+*.js
+*.js.map
+!babel.config.js
+!jest.config.js
