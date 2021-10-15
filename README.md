@@ -1,9 +1,9 @@
-# Discord Bot
+# AnubiBot
 
-Ein nützlicher Discord Bot
+A useful discord bot
 
-## Werte
+## Values
 ### Config
-|  Wert |      Beschreibung     |
+| Value |       Description     |
 |:-----:|:---------------------:|
-| token | Der Token von dem Bot |
+| token |  The token of the bot |
