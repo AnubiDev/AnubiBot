@@ -6,7 +6,7 @@ import * as chalk from "chalk"
 export class Logger {
     logger: winston.Logger
 
-    constructor(level: LogLevel) {
+    initialiseLogger(level: LogLevel) {
         this.logger = winston.createLogger({
             level: level.toString().toLowerCase(),
             levels: {

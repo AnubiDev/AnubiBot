@@ -1,12 +1,14 @@
 import {Client, ClientUser} from "discord.js";
-import {Logger, LogLevel} from "../../util/Logger";
-import {Ready} from "../../listener/Ready";
+import {ReadyListener} from "../../listener/ReadyListener";
+import {TestLogger} from "../TestLogger";
+import {TestDatabase} from "../TestDatabase";
 
 let client: Client
 
 beforeAll(() => {
     client = new Client({intents: []})
-    client["logger"] = new Logger(LogLevel.ERROR)
+    client["logger"] = new TestLogger()
+    client["database"] = new TestDatabase()
 
     // @ts-ignore
     client.user = new ClientUser(client, {
@@ -16,8 +18,8 @@ beforeAll(() => {
     })
 })
 
-test('Check Ready', async () => {
-    const ready = new Ready()
+test('ReadyListener', async () => {
+    const ready = new ReadyListener()
     ready.register(client)
     await ready.call(client)
 })

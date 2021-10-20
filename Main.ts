@@ -1,7 +1,8 @@
 import {Client} from "discord.js";
 import {token} from "./data/config.json"
 import {Logger, LogLevel} from "./util/Logger";
-import {Ready} from "./listener/Ready";
+import {ReadyListener} from "./listener/ReadyListener";
+import {Database} from "./util/Database";
 
 // Client
 const client = new Client({
@@ -19,10 +20,16 @@ const client = new Client({
 });
 
 // Logger
-const logger = new Logger(LogLevel.DEBUG);
+const logger = new Logger();
+logger.initialiseLogger(LogLevel.DEBUG)
 client["logger"] = logger;
 
-new Ready().register(client);
+const database = new Database()
+database.initialiseDatabase()
+database.initialiseTables()
+client["database"] = database
+
+new ReadyListener().register(client);
 
 (async () => {
     await client.login(token)
