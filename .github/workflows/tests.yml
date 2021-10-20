@@ -12,7 +12,13 @@ jobs:
         uses: actions/setup-node@v2.4.1
         with:
           node-version: 16.11.0
-          cache: npm
+      - name: Cache Node Modules
+        uses: actions/cache@v2.1.6
+        with:
+          path: './node_modules'
+          key: ${{ runner.os }}-AnubiBot-1-${{ hashFiles('./package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-AnubiBot-1-
       - name: Install Node Modules
         run: npm install
       - name: Create required files
