@@ -8,14 +8,16 @@ body:
       label: Is there an existing issue for this?
       description: Please search to see if an issue already exists for the bug you encountered.
       options:
-      - label: I have searched the existing issues
-        required: true
+        - label: I have searched the existing issues
+          required: true
+
   - type: textarea
     attributes:
       label: Describe The Bug
       description: A clear and concise description of what the bug is.
     validations:
       required: true
+
   - type: textarea
     attributes:
       label: Steps To Reproduce
@@ -27,15 +29,17 @@ body:
         4. See error
     validations:
       required: true
+
   - type: textarea
     attributes:
       label: Expected Behavior
       description: A clear and concise description of what you expected to happen.
     validations:
       required: true
+
   - type: textarea
     attributes:
       label: Additional Informaton
       description: Add any other context about the problem here.
     validations:
-      required: false     
+      required: false
