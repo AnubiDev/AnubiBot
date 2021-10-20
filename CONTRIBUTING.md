@@ -20,7 +20,7 @@ Then there are some directories you might need:
 ### Adding Listeners
 To add a listener to the project first check if it already exists.
 If it doesn't exist you can go on otherwise you should use the listener file you found.
-If the listener doesn't exist the create a file with the following name `[event-name]Listener.ts`.
+If the listener doesn't exist then create a file with the following name `[event-name]Listener.ts`.
 Replace the `[event-name]` part with the name from the discord.js docs.
 
 > Please note that the first letter is always a upper-case letter.
