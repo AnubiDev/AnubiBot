@@ -6,8 +6,13 @@ import {Database} from "./util/Database";
 
 // Client
 const client = new Client({
-    intents: [],
-    partials: [],
+    intents: [
+        "GUILDS",
+        "GUILD_MEMBERS"
+    ],
+    partials: [
+        "GUILD_MEMBER"
+    ],
     presence: {
         status: "online",
         activities: [
