@@ -2,14 +2,6 @@ name: Feature Request
 description: Suggest an feature for the bot
 labels: ["type: enhancement"]
 body:
-  - type: checkboxes
-    attributes:
-      label: Is there an existing issue for this?
-      description: Please search to see if an issue already exists for the request you want to create.
-      options:
-        - label: I have searched the existing issues
-          required: true
-
   - type: textarea
     attributes:
       label: Is your feature request related to a problem?
@@ -37,3 +29,9 @@ body:
       description: Add any other context or screenshots about the feature request here.
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting this feature request, please search our issue tracker to ensure your feature has not
+        alerady been requested.
